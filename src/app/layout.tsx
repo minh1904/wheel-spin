@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Geologica } from 'next/font/google';
 import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
+import NavbarLayout from '@/components/layouts/navbar';
 
-const inter = Inter({
+const geologica = Geologica({
   subsets: ['latin'],
   display: 'swap',
 });
@@ -18,7 +19,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${geologica.className} antialiased`}>
+        <NavbarLayout />
+        {children}
+      </body>
       <Toaster />
     </html>
   );

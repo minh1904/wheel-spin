@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowUpRight, Hand, PencilRuler, UserRoundSearch } from 'lucide-react';
-import cta1 from '../../../public/cta1.svg';
+import cta1 from '../../../public/wheel.png';
 import Image from 'next/image';
 
 export default function ConceptPage() {
   return (
-    <div className="min-h-screen bg-white text-black flex flex-col items-center px-6 py-16">
+    <div className="min-h-screen bg-white text-black flex flex-col items-center px-6 py-16 pt-40">
       {/* Heading */}
       <div className="max-w-6xl w-full flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <h1 className="text-6xl md:text-9xl font-black leading-tight tracking-tight text-center md:text-left">

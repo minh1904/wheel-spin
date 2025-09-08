@@ -16,7 +16,6 @@ import {
 } from '@/components/ui/form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { redirect } from 'next/navigation';
 import { toast } from 'sonner';
 
@@ -41,7 +40,7 @@ export function LoginForm({
     console.log('Submitted:', values);
     // TODO: gọi API đăng nhập
     toast.success('Đăng nhập thành công!');
-    redirect('/spin');
+    redirect('/wheel');
   };
 
   return (

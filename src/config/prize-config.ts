@@ -1,6 +1,12 @@
 export interface PrizeConfig {
   option: string;
-  image: { uri: string; sizeMultiplier: number; offsetY: number };
+  image: {
+    uri: string;
+    sizeMultiplier?: number;
+    offsetY?: number;
+    offsetX?: number;
+  };
+  backgroundColor?: string;
   probability: number; // Tỉ lệ phần trăm (0-100)
 }
 
