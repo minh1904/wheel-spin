@@ -3,6 +3,8 @@ import { Geologica } from 'next/font/google';
 import { Toaster } from '@/components/ui/sonner';
 import './globals.css';
 import NavbarLayout from '@/components/layouts/navbar';
+import FooterLayout from '@/components/layouts/footer';
+import ReactQueryProvider from '@/providers/query-provider';
 
 const geologica = Geologica({
   subsets: ['latin'],
@@ -20,8 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geologica.className} antialiased`}>
-        <NavbarLayout />
-        {children}
+        <ReactQueryProvider>
+          <NavbarLayout />
+          {children}
+          <FooterLayout />
+        </ReactQueryProvider>
       </body>
       <Toaster />
     </html>

@@ -16,6 +16,7 @@ import { selectPrizeByProbability } from '../../config/prize-config';
 // ===================== PRIZE CONFIG =====================
 const prizeConfig = [
   {
+    id: 123,
     option: 'GenZ Việt Nam Package',
     image: { uri: '/1.png', sizeMultiplier: 1.2, offsetY: 140 },
     probability: 0,
@@ -73,10 +74,12 @@ const prizeConfig = [
   },
 ];
 
-const data = prizeConfig.map(({ backgroundColor, textColor, ...prize }) => ({
-  ...prize,
-  style: { backgroundColor, textColor },
-}));
+const data = prizeConfig.map(
+  ({ id, backgroundColor, textColor, ...prize }) => ({
+    ...prize,
+    style: { backgroundColor, textColor },
+  })
+);
 
 const topPrizes = [
   {
@@ -129,7 +132,7 @@ export default function Page() {
   const handleSpinClick = () => {
     if (!mustSpin) {
       const newPrizeNumber = selectPrizeByProbability(prizeConfig);
-      setPrizeNumber(newPrizeNumber);
+
       setMustSpin(true);
     }
   };
@@ -150,7 +153,7 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center py-12 min-h-screen mt-16 sm:mt-20 overflow-x-hidden">
       {/* Heading */}
-      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center uppercase mb-2 bg-gradient-to-r from-[#AA000A] to-[#DA202B] bg-clip-text text-transparent">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold pt-10 text-center uppercase mb-2 bg-gradient-to-r from-[#AA000A] to-[#DA202B] bg-clip-text text-transparent">
         VÒNG QUAY MAY MẮN
       </h1>
       <p className="text-center text-gray-700 mb-6 text-sm sm:text-base">

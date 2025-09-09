@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-gradient-to-r from-[#AA000A] to-[#DA202B] shadow-md h-25 ">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-gradient-to-r from-[#AA000A] to-[#DA202B] shadow-md h-20 ">
       <div
         className={cn(
           'mx-auto flex max-w-7xl items-center justify-between px-6 h-full'
