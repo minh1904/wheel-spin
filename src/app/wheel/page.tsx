@@ -4,9 +4,7 @@ import React, { useEffect, useState } from 'react';
 import WheelSection from '@/components/wheel/WheelSection';
 import ActionButtons from '@/components/wheel/ActionButtons';
 import TopPrizes from '@/components/wheel/TopPrizes';
-import PrizeProbability from '@/components/wheel/PrizeProbability';
 import ResultDialog from '@/components/wheel/ResultDialog';
-
 import preImage from '../../../public/pre.png';
 import goldImage from '../../../public/gold.png';
 import silverImage from '../../../public/silver.png';
@@ -74,12 +72,10 @@ const prizeConfig = [
   },
 ];
 
-const data = prizeConfig.map(
-  ({ id, backgroundColor, textColor, ...prize }) => ({
-    ...prize,
-    style: { backgroundColor, textColor },
-  })
-);
+const data = prizeConfig.map(({ backgroundColor, textColor, ...prize }) => ({
+  ...prize,
+  style: { backgroundColor, textColor },
+}));
 
 const topPrizes = [
   {
@@ -181,9 +177,6 @@ export default function Page() {
 
       {/* Top Prizes */}
       <TopPrizes topPrizes={topPrizes} />
-
-      {/* Prize Probability */}
-      <PrizeProbability prizeConfig={prizeConfig} />
 
       {/* Result Dialog */}
       <ResultDialog
