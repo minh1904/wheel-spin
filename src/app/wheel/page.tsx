@@ -104,7 +104,7 @@ const topPrizes = [
 // ===================== PAGE =====================
 export default function Page() {
   const [mustSpin, setMustSpin] = useState(false);
-  const [prizeNumber, setPrizeNumber] = useState(0);
+  const [prizeNumber, ] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [wonPrize, setWonPrize] = useState<string>('');
 
@@ -127,8 +127,6 @@ export default function Page() {
   // Spin handlers
   const handleSpinClick = () => {
     if (!mustSpin) {
-      const newPrizeNumber = selectPrizeByProbability(prizeConfig);
-
       setMustSpin(true);
     }
   };

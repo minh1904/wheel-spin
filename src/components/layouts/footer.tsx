@@ -5,7 +5,7 @@ import LocationsSection from './footer/LocationsSection';
 
 const Footer = () => {
   return (
-    <footer id="colophon" className="bg-[#030925] text-white ">
+    <footer id="colophon" className="bg-[#030925] text-white px-5 md:px-0 ">
       <div className="py-8 xl:py-16 container mx-auto max-w-7xl space-y-8">
         {/* Logo + tagline */}
         <div className="flex flex-col md:flex-row gap-6 md:place-items-center tracking-wider  md:text-left">

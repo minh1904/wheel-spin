@@ -12,10 +12,10 @@ interface TopPrize {
 
 export default function TopPrizes({ topPrizes }: { topPrizes: TopPrize[] }) {
   return (
-    <div className="max-w-6xl w-full mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border border-gray-200 overflow-hidden rounded-2xl">
+    <div className="max-w-6xl w-full mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border-0 md:border border-gray-200 overflow-hidden rounded-2xl gap-2 md:gap-0  ">
       {topPrizes.map((prize) => (
-        <div key={prize.id} className="flex flex-col items-center">
-          <div className="w-full flex flex-col items-center justify-center py-4 sm:py-6 bg-gradient-to-r from-[#AA000A] to-[#DA202B]">
+        <div key={prize.id} className="flex flex-col items-center ">
+          <div className="w-full flex flex-col items-center justify-center py-4 sm:py-6 bg-gradient-to-r from-[#AA000A] to-[#DA202B] ">
             <Image
               src={prize.image}
               alt={prize.alt}
